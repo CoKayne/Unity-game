@@ -36,8 +36,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\PlayerMovement.cs" />
-     <Compile Include="Assets\Kill_Player.cs" />
+     <Compile Include="Assets\Scripts\Player1_move.cs" />
+     <Compile Include="Assets\Scripts\Kill_Player.cs" />
+     <Compile Include="Assets\Scripts\Player2_move.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
