@@ -12,15 +12,15 @@ public class Player1_move : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    int moving_input(){
-        if(Input.GetKey("a")){
+   /* int moving_input(){               直接位移，座標移動
+        if(Input.GetKey("j")){
             return -1;
         }
-        if(Input.GetKey("d")){
+        if(Input.GetKey("l")){
             return 1;
         }
         return 0;
-    }
+    } */
     void Update(){
         var movement = Input.GetAxis("Horizontal");
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * speed;

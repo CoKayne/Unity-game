@@ -12,7 +12,7 @@ public class Player2_move : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    int moving_input(){
+   /* int moving_input(){               直接位移，座標移動
         if(Input.GetKey("j")){
             return -1;
         }
@@ -20,9 +20,9 @@ public class Player2_move : MonoBehaviour
             return 1;
         }
         return 0;
-    }
+    } */
     void Update(){
-        var movement = moving_input();
+        var movement = Input.GetAxis("Horizontal2");
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * speed;
 
         if(!Mathf.Approximately(0, movement)){
