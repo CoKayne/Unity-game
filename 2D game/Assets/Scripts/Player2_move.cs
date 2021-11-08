@@ -22,6 +22,14 @@ public class Player2_move : MonoBehaviour
         return 0;
     } */
     void Update(){
+        
+        if(Input.GetKeyDown("i") && Mathf.Abs(rb.velocity.y) < 0.001f){
+            rb.AddForce(new Vector2(0, jumpforce), ForceMode2D.Impulse);
+        }
+    }       
+
+    void FixedUpdate() {
+        
         var movement = Input.GetAxis("Horizontal2");
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * speed;
 
@@ -29,10 +37,9 @@ public class Player2_move : MonoBehaviour
             transform.rotation = movement > 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
         }
 
-        if(Input.GetKeyDown("i") && Mathf.Abs(rb.velocity.y) < 0.001f){
-            rb.AddForce(new Vector2(0, jumpforce), ForceMode2D.Impulse);
-        }
-    }       
+        
+
+    }
 
     
 

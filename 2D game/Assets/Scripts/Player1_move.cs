@@ -22,12 +22,6 @@ public class Player1_move : MonoBehaviour
         return 0;
     } */
     void Update(){
-        var movement = Input.GetAxis("Horizontal");
-        transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * speed;
-
-        if(!Mathf.Approximately(0, movement)){
-            transform.rotation = movement > 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
-        }
 
         if(Input.GetKeyDown("w") && Mathf.Abs(rb.velocity.y) < 0.001f){
             rb.AddForce(new Vector2(0, jumpforce), ForceMode2D.Impulse);
@@ -35,7 +29,15 @@ public class Player1_move : MonoBehaviour
     }       
 
     void FixedUpdate() {
-       
+        var movement = Input.GetAxis("Horizontal");
+        transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * speed;
+
+        if(!Mathf.Approximately(0, movement)){
+            transform.rotation = movement > 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
+        }
+
+        
     }
+
 
 }
