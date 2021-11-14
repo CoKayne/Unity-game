@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.unity.2d.animation": {
-      "version": "5.0.5",
+      "version": "5.0.9",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -20,6 +20,15 @@
       "dependencies": {
         "com.unity.2d.sprite": "1.0.0",
         "com.unity.modules.uielements": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.2d.ik": {
+      "version": "3.0.2-preview.3",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.2d.common": "3.0.1"
       },
       "url": "https://packages.unity.com"
     },
@@ -125,6 +134,15 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.postprocessing": {
+      "version": "3.1.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.physics": "1.0.0"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
