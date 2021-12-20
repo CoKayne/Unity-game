@@ -695,7 +695,7 @@ MonoBehaviour:
   maxPosX: 25
   minInterval: 2
   maxInterval: 3
-  destroytime: 3
+  destroytime: 20
   cloneobj: {fileID: 0}
 --- !u!212 &1272191739
 SpriteRenderer:
@@ -904,7 +904,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436052371}
   m_LocalRotation: {x: -0, y: 0.006551017, z: -0, w: 0.99997854}
-  m_LocalPosition: {x: -30.7, y: 37.3, z: -0.7}
+  m_LocalPosition: {x: -4, y: 40.1, z: -0.7}
   m_LocalScale: {x: 0.657962, y: 0.657962, z: 0.657962}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1095,7 +1095,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607502461}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.1, y: 36.1, z: 0}
+  m_LocalPosition: {x: 5.1, y: 39.6, z: 0}
   m_LocalScale: {x: 1.2269489, y: 1.2269489, z: 1.2269489}
   m_Children: []
   m_Father: {fileID: 0}
