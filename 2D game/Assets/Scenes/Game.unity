@@ -587,7 +587,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cb2c8b453a0fce946aca33363fe0cbe2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 810f9ca0a858ce943808233f69380800, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -595,7 +595,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 127
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -970,9 +970,9 @@ MonoBehaviour:
   posY: 49
   minPosX: -25
   maxPosX: 25
-  minInterval: 0.5
-  maxInterval: 2.5
-  maxIntervaldown: 0.5
+  minInterval: 0.3
+  maxInterval: 3
+  maxIntervaldown: 0.45
   destroytime: 20
   timer: 0
   cloneobj: {fileID: 0}
@@ -1084,7 +1084,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436052371}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1390,7 +1390,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607502461}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
