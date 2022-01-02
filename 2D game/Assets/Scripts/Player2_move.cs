@@ -11,16 +11,6 @@ public class Player2_move : MonoBehaviour
     void start(){
         rb = GetComponent<Rigidbody2D>();
     }
-
-   /* int moving_input(){               直接位移，座標移動
-        if(Input.GetKey("j")){
-            return -1;
-        }
-        if(Input.GetKey("l")){
-            return 1;
-        }
-        return 0;
-    } */
     void Update(){
         
         if(Input.GetKeyDown("i") && Mathf.Abs(rb.velocity.y) < 0.001f){
@@ -36,11 +26,5 @@ public class Player2_move : MonoBehaviour
         if(!Mathf.Approximately(0, movement)){
             transform.rotation = movement > 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
         }
-
-        
-
     }
-
-    
-
 }
