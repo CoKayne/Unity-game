@@ -6,6 +6,12 @@ public class Stage_movement : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed = 1f;
+
+    public  float timer= 0f;
+
+    public  float speedup= 0f;
+
+    public  float speedlimit;
     void Start()
     {
 
@@ -18,6 +24,12 @@ public class Stage_movement : MonoBehaviour
     }
     
     void FixedUpdate() { 
+            timer+=Time.deltaTime;
+            if(timer>1&&speed<speedlimit){
+                timer=0f;
+                speed+=speedup;
+            }
+
             transform.position += new Vector3(0, -speed, 0) * Time.deltaTime; 
     }
 }

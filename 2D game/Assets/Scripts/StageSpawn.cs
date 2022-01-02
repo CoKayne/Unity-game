@@ -18,7 +18,11 @@ public class StageSpawn : MonoBehaviour
     public float minInterval;
     public float maxInterval;
 
+    public float maxIntervaldown;
+
     public float destroytime;
+
+    public  float timer= 0f;
 
     public GameObject cloneobj;
     
@@ -33,9 +37,14 @@ public class StageSpawn : MonoBehaviour
         while (true) {
 			//生產裝備
             cloneobj = Instantiate (stagePrefabs [Random.Range (0,stagePrefabs.Length)], new Vector3 (Random.Range (minPosX, maxPosX), posY, -0.1f), Quaternion.identity);
-			
+            timer+=Time.deltaTime;
+
+			if(timer>0.005f&&maxInterval-maxIntervaldown>minInterval){
+                timer=0f;
+               maxInterval-=maxIntervaldown;
+            }
 			//暫停
-            yield return new WaitForSeconds (Random.Range (minInterval, maxInterval));
+            yield return new WaitForSeconds (Random.Range (maxInterval, maxInterval));
 
         }
     }

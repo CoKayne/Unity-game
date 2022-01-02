@@ -25,6 +25,7 @@ public class Player1_move : MonoBehaviour
 
         if(Input.GetKeyDown("w") && Mathf.Abs(rb.velocity.y) < 0.001f){
             rb.AddForce(new Vector2(0, jumpforce), ForceMode2D.Impulse);
+            SoundManagerScript.PlaySound("jump");
         }
 
     }       
