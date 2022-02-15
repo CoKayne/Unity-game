@@ -23,6 +23,11 @@ public class StageSpawn : MonoBehaviour
     public float destroytime;
 
     public  float timer= 0f;
+    public  float timer2= 0f;
+
+    public  float timedown= 0f;
+
+    public   float timelimit= 0f;
 
     public GameObject cloneobj;
     
@@ -51,5 +56,14 @@ public class StageSpawn : MonoBehaviour
 
      void Update() {
         Destroy(cloneobj,destroytime);
+    }
+
+      void FixedUpdate() { 
+            timer2+=Time.deltaTime;
+            if(timer>1&&maxInterval>=timelimit&&minInterval>=timelimit){
+                timer2=0f;
+                maxInterval-=timedown;
+                minInterval-=timedown;
+            }; 
     }
 }

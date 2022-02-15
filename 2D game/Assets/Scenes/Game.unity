@@ -970,11 +970,14 @@ MonoBehaviour:
   posY: 49
   minPosX: -25
   maxPosX: 25
-  minInterval: 0.3
-  maxInterval: 3
+  minInterval: 1.4
+  maxInterval: 1.4
   maxIntervaldown: 0.45
   destroytime: 20
   timer: 0
+  timer2: 0
+  timedown: 0.0072
+  timelimit: 0.5
   cloneobj: {fileID: 0}
 --- !u!212 &1272191739
 SpriteRenderer:
@@ -1084,7 +1087,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436052371}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1390,7 +1393,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607502461}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1611,6 +1614,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3485275964238621201, guid: 920bf7a053c5fd044afd0123bd1d1a60, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3485275964238621201, guid: 920bf7a053c5fd044afd0123bd1d1a60, type: 3}
       propertyPath: speedup
       value: 0.2
       objectReference: {fileID: 0}
@@ -1772,6 +1779,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3485275964238621201, guid: 920bf7a053c5fd044afd0123bd1d1a60, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3485275964238621201, guid: 920bf7a053c5fd044afd0123bd1d1a60, type: 3}
       propertyPath: speedup
       value: 0.2
