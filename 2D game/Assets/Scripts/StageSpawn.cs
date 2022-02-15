@@ -60,7 +60,7 @@ public class StageSpawn : MonoBehaviour
 
       void FixedUpdate() { 
             timer2+=Time.deltaTime;
-            if(timer>1&&maxInterval>=timelimit&&minInterval>=timelimit){
+            if(timer2>1&&maxInterval>=timelimit&&minInterval>=timelimit){
                 timer2=0f;
                 maxInterval-=timedown;
                 minInterval-=timedown;

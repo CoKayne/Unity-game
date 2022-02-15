@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Player1_move : MonoBehaviour
 {
+    public BoxCollider2D feet_collider;
     public float speed = 1f;
     public float jumpforce = 1f;
     public Rigidbody2D rb;
+
+    public int count=0;
 
     void start(){
         rb = GetComponent<Rigidbody2D>();
@@ -22,12 +25,16 @@ public class Player1_move : MonoBehaviour
         return 0;
     } */
     void Update(){
-
-        if(Input.GetKeyDown("w") && Mathf.Abs(rb.velocity.y) < 0.001f){
+        if(Input.GetKeyDown("w")&&count<2/* && Mathf.Abs(rb.velocity.y) < 0.001f*/){
+            count++;
             rb.AddForce(new Vector2(0, jumpforce), ForceMode2D.Impulse);
             SoundManagerScript.PlaySound("jump");
         }
-
+        void OnTriggerEnter2D(Collider2D other) {
+        if(other.CompareTag("Player")){
+        }
+    }
+        
     }       
 
     void FixedUpdate() {
