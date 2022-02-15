@@ -40,13 +40,14 @@
      <Compile Include="Assets\Scripts\Main_Menu.cs" />
      <Compile Include="Assets\Scripts\stage_destroy.cs" />
      <Compile Include="Assets\Scripts\Player1_move.cs" />
+     <Compile Include="Assets\Scripts\StageSpawn2.cs" />
      <Compile Include="Assets\Scripts\StageSpawn.cs" />
      <Compile Include="Assets\Scripts\Kill_Player.cs" />
      <Compile Include="Assets\Scripts\Time_control.cs" />
      <Compile Include="Assets\Scripts\SlowMotion.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
-     <Compile Include="Assets\Scripts\Stage_movement.cs" />
      <Compile Include="Assets\Scripts\SoundManagerScript.cs" />
+     <Compile Include="Assets\Scripts\Stage_movement.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

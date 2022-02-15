@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &93633443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -477,6 +477,10 @@ PrefabInstance:
     - target: {fileID: 3485275964238621201, guid: 920bf7a053c5fd044afd0123bd1d1a60, type: 3}
       propertyPath: speedlimit
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3485275964238621204, guid: 920bf7a053c5fd044afd0123bd1d1a60, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3485275964238621205, guid: 920bf7a053c5fd044afd0123bd1d1a60, type: 3}
       propertyPath: m_UsedByEffector
@@ -945,6 +949,7 @@ GameObject:
   - component: {fileID: 1272191740}
   - component: {fileID: 1272191739}
   - component: {fileID: 1272191738}
+  - component: {fileID: 1272191741}
   m_Layer: 0
   m_Name: stage spawn
   m_TagString: Untagged
@@ -1044,6 +1049,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1272191741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272191737}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d443f3d0017aaf4ba0ad820eafc65df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stagePrefabs:
+  - {fileID: 1234699795}
+  chances: 1
+  posY: 49
+  minPosX: -25
+  maxPosX: 25
+  minInterval: 1.5
+  maxInterval: 1.5
+  maxIntervaldown: 0.45
+  destroytime: 20
+  timer: 0
+  timer2: 0
+  timedown: 0.02
+  timelimit: 0.5
+  cloneobj: {fileID: 0}
 --- !u!1 &1436052371
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,6 +1584,10 @@ PrefabInstance:
     - target: {fileID: 3485275964238621201, guid: 920bf7a053c5fd044afd0123bd1d1a60, type: 3}
       propertyPath: speedlimit
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3485275964238621204, guid: 920bf7a053c5fd044afd0123bd1d1a60, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3485275964238621205, guid: 920bf7a053c5fd044afd0123bd1d1a60, type: 3}
       propertyPath: m_UsedByEffector

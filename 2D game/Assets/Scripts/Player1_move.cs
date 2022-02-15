@@ -25,19 +25,14 @@ public class Player1_move : MonoBehaviour
         return 0;
     } */
     void Update(){
-        if(Input.GetKeyDown("w")&&count<2/* && Mathf.Abs(rb.velocity.y) < 0.001f*/){
-            count++;
+        if(Input.GetKeyDown("w")&& Mathf.Abs(rb.velocity.y) < 0.001f){
             rb.AddForce(new Vector2(0, jumpforce), ForceMode2D.Impulse);
             SoundManagerScript.PlaySound("jump");
         }
-        void OnTriggerEnter2D(Collider2D other) {
-        if(other.CompareTag("Player")){
-        }
-    }
-        
-    }       
+    }   
 
     void FixedUpdate() {
+
         var movement = Input.GetAxis("Horizontal");
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * speed;
 
