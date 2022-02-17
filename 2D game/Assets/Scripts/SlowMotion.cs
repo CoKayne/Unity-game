@@ -7,19 +7,23 @@ public class SlowMotion : MonoBehaviour
 {
     public PostProcessVolume Volume;
     private ChromaticAberration CA; 
+    public float CAValue = 0f;
     private Vignette VG;
+    public float VGValue = 0f;
     private LensDistortion LD;
+    public float LDValue = 0f;
     private Grain grain;
+    public float grainValue = 0f;
     // Start is called before the first frame update
     void Start(){
             Volume.profile.TryGetSettings(out CA);
-            CA.intensity.value = 0;
+            CA.intensity.value = CAValue;
             Volume.profile.TryGetSettings(out VG);
-            VG.intensity.value = 0.336f; 
+            VG.intensity.value = VGValue;
             Volume.profile.TryGetSettings(out LD);
-            LD.intensity.value = 0; 
+            LD.intensity.value = LDValue; 
             Volume.profile.TryGetSettings(out grain);
-            grain.intensity.value = 0; 
+            grain.intensity.value = grainValue; 
     }
 
     // Update is called once per frame
@@ -41,10 +45,10 @@ public class SlowMotion : MonoBehaviour
             //         break;
             //     }
             // }
-            CA.intensity.value = 0;
-            VG.intensity.value = 0.336f;
-            LD.intensity.value = 0;
-            grain.intensity.value = 0;
+            CA.intensity.value = CAValue;
+            VG.intensity.value = VGValue;
+            LD.intensity.value = LDValue;
+            grain.intensity.value = grainValue;
         }
 
     }
