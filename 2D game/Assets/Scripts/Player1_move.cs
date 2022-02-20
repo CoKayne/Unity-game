@@ -15,11 +15,21 @@ public class Player1_move : MonoBehaviour
     public float doubleJumpForce = 1f;
     private bool doubleJump;
     public Rigidbody2D rb;
+    public float talorportcountdown=0f;
+    public float talorportcountdownlimit=0f;
+    public float talorpordistance=0f;
+    public float facewh=0f;
 
     void start(){
         rb = GetComponent<Rigidbody2D>();
         // extraJumps = extraJumpsValue;
     }
+    void talorport(float movement){
+       talorportcountdown=0f;
+        transform.position += new Vector3(movement, 0, 0)*talorpordistance;
+    return;
+   }
+
 
    /* int moving_input(){               直接位移，座標移動
         if(Input.GetKey("j")){
@@ -49,12 +59,12 @@ public class Player1_move : MonoBehaviour
             rb.AddForce(new Vector2(0, jumpforce), ForceMode2D.Impulse);
             SoundManagerScript.PlaySound("jump");
         }
-*/
-
+*/ 
+        talorportcountdown+=Time.deltaTime;
         if(isGrounded && !Input.GetKey("w")){
             doubleJump = false;
         }
-
+        if(talorportcountdown>=talorportcountdownlimit&&Input.GetKeyDown("e"))talorport(facewh);
         if(Input.GetKeyDown("w")){
             if(isGrounded || doubleJump){
                 rb.velocity = new Vector2(rb.velocity.x, doubleJump ? doubleJumpForce : jumpforce);
@@ -74,6 +84,8 @@ public class Player1_move : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
         var movement = Input.GetAxis("Horizontal");
+        if(movement>0)facewh=1f;
+        else if(movement<0) facewh=-1f;
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * speed;
 
         if(!Mathf.Approximately(0, movement)){

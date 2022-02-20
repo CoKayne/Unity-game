@@ -823,11 +823,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3485275964238621207, guid: 920bf7a053c5fd044afd0123bd1d1a60, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -51.5
+      value: -101.3
       objectReference: {fileID: 0}
     - target: {fileID: 3485275964238621207, guid: 920bf7a053c5fd044afd0123bd1d1a60, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.3
+      value: -6.7
       objectReference: {fileID: 0}
     - target: {fileID: 3485275964238621207, guid: 920bf7a053c5fd044afd0123bd1d1a60, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1664,6 +1664,10 @@ MonoBehaviour:
   jumpforce: 100
   doubleJumpForce: 75
   rb: {fileID: 1607502462}
+  talorportcountdown: 0
+  talorportcountdownlimit: 0
+  talorpordistance: 20
+  facewh: 0
 --- !u!114 &1607502467
 MonoBehaviour:
   m_ObjectHideFlags: 0
