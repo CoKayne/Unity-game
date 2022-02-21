@@ -155,8 +155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: 3
   heartDirection: 1
-  disappearDistance: 0
-  player: {fileID: 0}
+  disappearDistance: 50
+  player: 
 --- !u!212 &18842740
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -216,7 +216,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18842738}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.8, y: 20, z: 0}
+  m_LocalPosition: {x: 37.6, y: 20, z: 0}
   m_LocalScale: {x: 1.5395135, y: 1.5395135, z: 1.5395135}
   m_Children: []
   m_Father: {fileID: 0}
@@ -287,7 +287,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93633442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.8, y: 52, z: 0}
+  m_LocalPosition: {x: -5.8, y: 60.2, z: 0}
   m_LocalScale: {x: 100, y: 3.2684686, z: 3.2684686}
   m_Children: []
   m_Father: {fileID: 0}
@@ -829,9 +829,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 2
-  heartDirection: 1
-  disappearDistance: 0
-  player: {fileID: 0}
+  heartDirection: -1
+  disappearDistance: 50
+  player: 
 --- !u!212 &598651846
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -891,7 +891,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 598651844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -52.3, y: 20, z: 0}
+  m_LocalPosition: {x: -50.4, y: 20, z: 0}
   m_LocalScale: {x: 1.5395135, y: 1.5395135, z: 1.5395135}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1495,9 +1495,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 3
-  heartDirection: 1
-  disappearDistance: 0
-  player: {fileID: 0}
+  heartDirection: -1
+  disappearDistance: 50
+  player: 
 --- !u!212 &1380008784
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1557,7 +1557,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1380008782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -44.3, y: 20, z: 0}
+  m_LocalPosition: {x: -42.4, y: 20, z: 0}
   m_LocalScale: {x: 1.5395135, y: 1.5395135, z: 1.5395135}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1595,8 +1595,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: 1
   heartDirection: 1
-  disappearDistance: 0
-  player: {fileID: 0}
+  disappearDistance: 50
+  player: 
 --- !u!212 &1387956807
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1656,7 +1656,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1387956805}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 54.8, y: 20, z: 0}
+  m_LocalPosition: {x: 53.6, y: 20, z: 0}
   m_LocalScale: {x: 1.5395135, y: 1.5395135, z: 1.5395135}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1675,9 +1675,10 @@ GameObject:
   - component: {fileID: 1436052374}
   - component: {fileID: 1436052377}
   - component: {fileID: 1436052372}
+  - component: {fileID: 1436052378}
   - component: {fileID: 1436052373}
   m_Layer: 0
-  m_Name: Player2
+  m_Name: Robert
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1695,15 +1696,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e292ab4739989f04abb97b961e2b53ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundCheck: {fileID: 1082191066}
-  checkRadius: 0.5
   whatIsGround:
     serializedVersion: 2
     m_Bits: 128
+  groundCheck: {fileID: 1082191066}
+  checkRadius: 0.5
+  doubleJumpForce: 1
   speed: 60
   jumpforce: 100
-  doubleJumpForce: 75
   rb: {fileID: 1436052374}
+  facewh: 0
 --- !u!61 &1436052373
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1833,6 +1835,22 @@ MonoBehaviour:
   timer: 0
   speedup: 0.2
   speedlimit: 30
+--- !u!114 &1436052378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436052371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4305e74c9a7b54489a373f1851f1ad5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeValue: 3
+  Player_Direction: 0
+  Name: Robert
+  respawn: 1
 --- !u!1 &1569171413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,8 +1934,8 @@ GameObject:
   - component: {fileID: 1607502463}
   - component: {fileID: 1607502462}
   - component: {fileID: 1607502465}
-  - component: {fileID: 1607502466}
   - component: {fileID: 1607502467}
+  - component: {fileID: 1607502466}
   - component: {fileID: 1607502468}
   - component: {fileID: 1607502469}
   m_Layer: 0
@@ -2049,7 +2067,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1607502461}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b66543e7b34376c449e895b3d4bf6bb4, type: 3}
+  m_Script: {fileID: 11500000, guid: a4f3778bc144ee142b731ef4bb1ee789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   groundCheck: {fileID: 970078499}
@@ -2063,7 +2081,7 @@ MonoBehaviour:
   rb: {fileID: 1607502462}
   teleportcountdown: 0
   teleportcountdownlimit: 0
-  telepordistance: 0
+  telepordistance: 20
   facewh: 0
 --- !u!114 &1607502467
 MonoBehaviour:
@@ -2121,6 +2139,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeValue: 3
   Player_Direction: 0
+  Name: Ghost
+  respawn: 1
 --- !u!1 &1687739344
 GameObject:
   m_ObjectHideFlags: 0
@@ -2478,7 +2498,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2022521652}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -60.3, y: 20, z: 0}
+  m_LocalPosition: {x: -58.4, y: 20, z: 0}
   m_LocalScale: {x: 1.5395135, y: 1.5395135, z: 1.5395135}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2497,9 +2517,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 1
-  heartDirection: 1
-  disappearDistance: 0
-  player: {fileID: 1607502461}
+  heartDirection: -1
+  disappearDistance: 50
+  player: 
 --- !u!1 &2087244220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2530,8 +2550,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName:
-  - ghost
-  - robert
+  - Ghost
+  - Robert
   left: 
   right: 
 --- !u!4 &2087244222
@@ -2623,8 +2643,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: 2
   heartDirection: 1
-  disappearDistance: 0
-  player: {fileID: 0}
+  disappearDistance: 50
+  player: 
 --- !u!212 &2100964443
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2684,7 +2704,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2100964441}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46.8, y: 20, z: 0}
+  m_LocalPosition: {x: 45.6, y: 20, z: 0}
   m_LocalScale: {x: 1.5395135, y: 1.5395135, z: 1.5395135}
   m_Children: []
   m_Father: {fileID: 0}

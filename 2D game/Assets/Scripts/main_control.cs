@@ -14,8 +14,8 @@ public class main_control : MonoBehaviour
     {
         left=playerName[0];
         right=playerName[1];
-        GameObject.Find(right).GetComponent<player_info>().Player_Direction = 1;
-        GameObject.Find(left).GetComponent<player_info>().Player_Direction = -1;
+        GameObject.Find(left).GetComponent<player_info>().setleft();
+        GameObject.Find(right).GetComponent<player_info>().setright();
     }
 
     // Update is called once per frame
