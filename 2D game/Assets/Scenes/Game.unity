@@ -155,6 +155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: 3
   heartDirection: 1
+  disappearDistance: 0
+  player: {fileID: 0}
 --- !u!212 &18842740
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -828,6 +830,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: 2
   heartDirection: 1
+  disappearDistance: 0
+  player: {fileID: 0}
 --- !u!212 &598651846
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1492,6 +1496,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: 3
   heartDirection: 1
+  disappearDistance: 0
+  player: {fileID: 0}
 --- !u!212 &1380008784
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1589,6 +1595,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: 1
   heartDirection: 1
+  disappearDistance: 0
+  player: {fileID: 0}
 --- !u!212 &1387956807
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1911,6 +1919,7 @@ GameObject:
   - component: {fileID: 1607502466}
   - component: {fileID: 1607502467}
   - component: {fileID: 1607502468}
+  - component: {fileID: 1607502469}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Player
@@ -2098,6 +2107,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.0851626, y: 0.5933175}
   m_EdgeRadius: 0
+--- !u!114 &1607502469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607502461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4305e74c9a7b54489a373f1851f1ad5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeValue: 3
+  ghostDirection: -1
 --- !u!1 &1687739344
 GameObject:
   m_ObjectHideFlags: 0
@@ -2475,6 +2498,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: 1
   heartDirection: 1
+  disappearDistance: 0
+  player: {fileID: 1607502461}
+--- !u!1 &2087244220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2087244222}
+  - component: {fileID: 2087244221}
+  m_Layer: 0
+  m_Name: main
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2087244221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087244220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68ad392b965adfa4ea893a4ae9c49152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName:
+  - ghost
+  - robert
+--- !u!4 &2087244222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087244220}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.52729, y: 13.015469, z: -0.5091466}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2093317700
 GameObject:
   m_ObjectHideFlags: 0
@@ -2550,6 +2621,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: 2
   heartDirection: 1
+  disappearDistance: 0
+  player: {fileID: 0}
 --- !u!212 &2100964443
 SpriteRenderer:
   m_ObjectHideFlags: 0
