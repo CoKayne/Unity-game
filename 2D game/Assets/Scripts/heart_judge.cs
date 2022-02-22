@@ -20,8 +20,8 @@ public class heart_judge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(heartDirection==-1)player=GameObject.Find("main").GetComponent<main_control>().left;
-        if(heartDirection==1)player=GameObject.Find("main").GetComponent<main_control>().right;
-        if(GameObject.Find(player).GetComponent<player_info>().lifeValue<order)getout();
+        if(heartDirection == -1) player = GameObject.Find("main").GetComponent<main_control>().left;
+        if(heartDirection == 1) player = GameObject.Find("main").GetComponent<main_control>().right;
+        if(GameObject.Find(player).GetComponent<player_info>().lifeValue < order) getout();
     }
 }

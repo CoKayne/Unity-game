@@ -5,30 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class player_info : MonoBehaviour
 {
-    public int lifeValue = 3;
+    public float lifeValue = 3;
     public int Player_Direction;
     public string Name;
-    public int respawn=1;
+    public int respawn = 1;
     // Start is called before the first frame update
     void Start()
     { 
         
     }
     public void setleft(){
-       Player_Direction=-1;
-   }
-   public void setright(){
-       Player_Direction=1;
-   }
+       Player_Direction =- 1;
+    }
+    public void setright(){
+       Player_Direction = 1;
+    }
 
-   public void respawnposition(){
-       transform.position=new Vector3(33*Player_Direction,43,0);
-   }
+    public void respawnposition(){
+       transform.position = new Vector3(33 * Player_Direction, 43, 0);
+    }
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Deadly_things")){
-            lifeValue--;
-            if(lifeValue>0)respawnposition();
+            lifeValue -= 1f;
+            if(lifeValue > 0) respawnposition();
             else SceneManager.LoadScene(respawn);
         }
         
