@@ -13,12 +13,12 @@ public class Rocket_control : MonoBehaviour
     public float decreaseTime = 0f;
     private bool spawnPlaceDecided = false;
     public int randomnumber=0;
+    public float launchx;
+    public float launchy;
+
     void Start()
     {
         
-    }
-    public void destrory(){
-        Destroy(cloneroket,0.01f);
     }
     // Update is called once per frame
     void Update()
@@ -27,11 +27,13 @@ public class Rocket_control : MonoBehaviour
         if(rocketTimer > rocketSpawntime){  
             randomnumber=Random.Range(0,rocketname.Length);
             rocketToLaunch = rocketname[randomnumber];
-            cloneroket=Instantiate(rockets[randomnumber],new Vector3 (Random.Range (GameObject.Find(rocketToLaunch).GetComponent<Rocket_movement>().maxX,GameObject.Find(rocketToLaunch).GetComponent<Rocket_movement>().minX), Random.Range (GameObject.Find(rocketToLaunch).GetComponent<Rocket_movement>().maxY,GameObject.Find(rocketToLaunch).GetComponent<Rocket_movement>().minY), 0), Quaternion.identity);
-            GameObject.Find(rocketToLaunch).GetComponentInChildren<WowMark_blink>().warningEnd = true;
-            spawnPlaceDecided = false;
+            launchx=Random.Range (GameObject.Find(rocketToLaunch).GetComponent<Rocket_movement>().maxX,GameObject.Find(rocketToLaunch).GetComponent<Rocket_movement>().minX);
+            launchy=Random.Range (GameObject.Find(rocketToLaunch).GetComponent<Rocket_movement>().maxY,GameObject.Find(rocketToLaunch).GetComponent<Rocket_movement>().minY);
+            cloneroket=Instantiate(rockets[randomnumber],new Vector3 (launchx, launchy, 0),Quaternion.identity);
+            GameObject.Find(rocketToLaunch).GetComponentInChildren<WowMark_blink>().warningStart = true;
             rocketTimer = 0;
-        }        
+        }
+        Destroy(cloneroket,10);        
     }
 
     private void FixedUpdate() {

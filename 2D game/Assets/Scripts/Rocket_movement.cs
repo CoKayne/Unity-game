@@ -35,7 +35,7 @@ public class Rocket_movement : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Deadly_things")){
-            GameObject.Find("Rocket_control").GetComponent<Rocket_control>().destrory();
+            
         }
     }
     // Update is called once per frame
