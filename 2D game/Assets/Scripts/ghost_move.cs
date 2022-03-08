@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Ghost_move : MonoBehaviour
 {
+    public CharacterController controller;
+    public Animator animator;
     private bool isGrounded;
     public Transform groundCheck;
     public float checkRadius;
@@ -22,6 +24,7 @@ public class Ghost_move : MonoBehaviour
 
     void start(){
         rb = GetComponent<Rigidbody2D>();
+        animator.SetBool("Isjumping",false);
         // extraJumps = extraJumpsValue;
     }
 
@@ -66,9 +69,9 @@ public class Ghost_move : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, doubleJump==1 ? doubleJumpForce : jumpforce);
                 SoundManagerScript.PlaySound("jump");
                 doubleJump ++;
+                 
             }
         }
-        
         if(Input.GetKeyUp("w") && rb.velocity.y > 0f){
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
