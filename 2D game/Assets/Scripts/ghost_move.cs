@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Ghost_move : MonoBehaviour
 {
-    public CharacterController controller;
-    public Animator animator;
     private bool isGrounded;
     public Transform groundCheck;
     public float checkRadius;
@@ -21,11 +19,12 @@ public class Ghost_move : MonoBehaviour
     public float teleportcountdownlimit=0f;
     public float telepordistance=0f;
     public float facewh=0f;
+    public player_info info;
+    public Animator animator;
 
     void start(){
         rb = GetComponent<Rigidbody2D>();
         animator.SetBool("Isjumping",false);
-        // extraJumps = extraJumpsValue;
     }
 
     public void teleport(float movement){
@@ -69,11 +68,12 @@ public class Ghost_move : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, doubleJump==1 ? doubleJumpForce : jumpforce);
                 SoundManagerScript.PlaySound("jump");
                 doubleJump ++;
-                 
+                animator.SetBool("Isjumping",true);
             }
         }
         if(Input.GetKeyUp("w") && rb.velocity.y > 0f){
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            animator.SetBool("Isjumping",true);
         }
 
    }
@@ -96,7 +96,12 @@ public class Ghost_move : MonoBehaviour
 
    }
 
+   void onGround(){
+       animator.SetBool("Isjumping",false);
+   }
+
     void Update(){
+        if(isGrounded)onGround();
         teleportcountdown += Time.deltaTime;
         if(teleportcountdown >= teleportcountdownlimit && Input.GetKeyDown("e"))teleport(facewh);
         if(GetComponent<player_info>().Player_Direction == -1)pl1_jump();

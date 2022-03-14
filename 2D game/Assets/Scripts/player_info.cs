@@ -9,6 +9,7 @@ public class player_info : MonoBehaviour
     public int Player_Direction;
     public string Name;
     public int respawn = 1;
+
     // Start is called before the first frame update
     void Start()
     { 
