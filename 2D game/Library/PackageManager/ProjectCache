@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637723266580103779
-    m_Hash: 222906023
+      ticks: 637829081359791778
+    m_Hash: 1220108222
   m_LockFileStatus:
     m_FilePath: C:/Users/Kayne/Desktop/Unity-game/2D game/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637723266580148849
-    m_Hash: 1058961809
+      ticks: 637829081359801800
+    m_Hash: 1264797306
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:

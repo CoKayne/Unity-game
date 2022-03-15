@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ghost_move : MonoBehaviour
+public class ghost_move : MonoBehaviour
 {
     private bool isGrounded;
     public Transform groundCheck;

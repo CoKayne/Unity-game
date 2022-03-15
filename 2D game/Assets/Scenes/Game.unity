@@ -16027,13 +16027,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082191065}
-  m_LocalRotation: {x: -0, y: -0.006551017, z: 0, w: 0.99997854}
-  m_LocalPosition: {x: 0.04, y: -0.192, z: 1.19}
+  m_LocalRotation: {x: -0.003323836, y: -0.0031856955, z: -0.000010588898, w: 0.99998945}
+  m_LocalPosition: {x: 0, y: -1, z: 1.19}
   m_LocalScale: {x: 0.551084, y: 0.5809559, z: 0.9126549}
   m_Children: []
   m_Father: {fileID: 1436052376}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.381, y: -0.365, z: 0}
 --- !u!1 &1185707077
 GameObject:
   m_ObjectHideFlags: 0
@@ -26257,13 +26257,33 @@ GameObject:
   - component: {fileID: 1436052378}
   - component: {fileID: 1436052373}
   - component: {fileID: 1436052379}
+  - component: {fileID: 1436052372}
   m_Layer: 0
   m_Name: Robert
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
+--- !u!95 &1436052372
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436052371}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4c7095e4def53d24ca64eef846133b52, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &1436052373
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26277,18 +26297,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03378732, y: -0.0030164719}
+  m_Offset: {x: 0.03714013, y: 0.03491515}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.4, y: 0.4}
+    oldSize: {x: 2.56, y: 2.56}
     newSize: {x: 19.2, y: 10.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.30129948, y: 0.35789186}
+  m_Size: {x: 1.8557353, y: 2.1330771}
   m_EdgeRadius: 0
 --- !u!50 &1436052374
 Rigidbody2D:
@@ -26351,7 +26371,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 7a6b981d283c8c94d8935d613875dc68, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9aba5aa4252f0fd42a55948fad30812c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -26371,7 +26391,7 @@ Transform:
   m_GameObject: {fileID: 1436052371}
   m_LocalRotation: {x: -0, y: 0.006551017, z: -0, w: 0.99997854}
   m_LocalPosition: {x: 31.17, y: 42.8, z: -1.3}
-  m_LocalScale: {x: 15, y: 15, z: 1.095581}
+  m_LocalScale: {x: 3, y: 3, z: 1.095581}
   m_Children:
   - {fileID: 1082191066}
   m_Father: {fileID: 0}
@@ -26406,7 +26426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeValue: 3
-  Player_Direction: 0
+  Player_Direction: 1
   Name: Robert
   respawn: 1
 --- !u!114 &1436052379
@@ -26431,6 +26451,9 @@ MonoBehaviour:
   jumpforce: 100
   rb: {fileID: 1436052374}
   facewh: 0
+  pld: 0
+  info: {fileID: 1436052378}
+  animator: {fileID: 1436052372}
 --- !u!1 &1552987760
 GameObject:
   m_ObjectHideFlags: 0
@@ -26685,7 +26708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1607502462
 Rigidbody2D:
   serializedVersion: 4
@@ -26822,7 +26845,7 @@ MonoBehaviour:
   rb: {fileID: 1607502462}
   teleportcountdown: 0
   teleportcountdownlimit: 0
-  telepordistance: 10
+  telepordistance: 15
   facewh: 0
   info: {fileID: 1607502469}
   animator: {fileID: 1607502470}
