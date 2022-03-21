@@ -73,6 +73,7 @@ public class Robert_move : MonoBehaviour
    public void pl1_jump(){
        if(isGrounded && !Input.GetKey("w")){
             doubleJump = 0;
+            animator.SetBool("Isjumping",false);
         }
 
         if(Input.GetKeyDown("w")){
@@ -93,11 +94,12 @@ public class Robert_move : MonoBehaviour
    public void pl2_jump(){
        if(isGrounded && !Input.GetKey("i")){
             doubleJump = 0;
+            animator.SetBool("Isjumping",false);
         }
 
         if(Input.GetKeyDown("i")){
             if(doubleJump<2){
-                 animator.SetBool("Isjumping",true);
+                animator.SetBool("Isjumping",true);
                 rb.velocity = new Vector2(rb.velocity.x, doubleJump==1 ? doubleJumpForce : jumpforce);
                 SoundManagerScript.PlaySound("jump");
                 doubleJump ++;
