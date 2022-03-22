@@ -21,9 +21,11 @@ public class ghost_move : MonoBehaviour
     public float facewh=0f;
     public player_info info;
     public Animator animator;
+    public int pld;
 
     void start(){
         rb = GetComponent<Rigidbody2D>();
+        animator.SetBool("Iswalking",false);
         animator.SetBool("Isjumping",false);
     }
 
@@ -35,8 +37,17 @@ public class ghost_move : MonoBehaviour
 
    public void pl1_movement(){
        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-
         var movement = Input.GetAxis("Horizontal");
+        if(movement>0){
+            facewh=1f;
+            animator.SetBool("Iswalking",true);
+            }
+        else if(movement<0) {
+            facewh=-1f;
+            animator.SetBool("Iswalking",true);
+            }else {
+                animator.SetBool("Iswalking",false);
+            }
         if(movement>0)facewh=1f;
         else if(movement<0) facewh=-1f;
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * speed;
@@ -50,6 +61,16 @@ public class ghost_move : MonoBehaviour
        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         
         var movement = Input.GetAxis("Horizontal2");
+        if(movement>0){
+            facewh=1f;
+            animator.SetBool("Iswalking",true);
+            }
+        else if(movement<0) {
+            facewh=-1f;
+            animator.SetBool("Iswalking",true);
+            }else {
+                animator.SetBool("Iswalking",false);
+            }
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * speed;
 
         if(!Mathf.Approximately(0, movement)){
@@ -58,32 +79,36 @@ public class ghost_move : MonoBehaviour
 
    }
 
-   public void pl1_jump(){
+    public void pl1_jump(){
        if(isGrounded && !Input.GetKey("w")){
             doubleJump = 0;
+            animator.SetBool("Isjumping",false);
         }
 
         if(Input.GetKeyDown("w")){
             if(doubleJump<2){
+                animator.SetBool("Isjumping",true);
                 rb.velocity = new Vector2(rb.velocity.x, doubleJump==1 ? doubleJumpForce : jumpforce);
                 SoundManagerScript.PlaySound("jump");
                 doubleJump ++;
-                animator.SetBool("Isjumping",true);
             }
         }
+        
         if(Input.GetKeyUp("w") && rb.velocity.y > 0f){
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
             animator.SetBool("Isjumping",true);
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
 
    }
    public void pl2_jump(){
        if(isGrounded && !Input.GetKey("i")){
             doubleJump = 0;
+            animator.SetBool("Isjumping",false);
         }
 
         if(Input.GetKeyDown("i")){
             if(doubleJump<2){
+                animator.SetBool("Isjumping",true);
                 rb.velocity = new Vector2(rb.velocity.x, doubleJump==1 ? doubleJumpForce : jumpforce);
                 SoundManagerScript.PlaySound("jump");
                 doubleJump ++;
@@ -91,26 +116,23 @@ public class ghost_move : MonoBehaviour
         }
         
         if(Input.GetKeyUp("i") && rb.velocity.y > 0f){
+             animator.SetBool("Isjumping",true);
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
 
    }
 
-   void onGround(){
-       animator.SetBool("Isjumping",false);
-   }
-
     void Update(){
-        if(isGrounded)onGround();
         teleportcountdown += Time.deltaTime;
         if(teleportcountdown >= teleportcountdownlimit && Input.GetKeyDown("e"))teleport(facewh);
-        if(GetComponent<player_info>().Player_Direction == -1)pl1_jump();
-        if(GetComponent<player_info>().Player_Direction == 1)pl2_jump();
+        pld=GetComponent<player_info>().Player_Direction;
+        if(pld ==-1)pl1_jump();
+        if(pld == 1)pl2_jump();
     }   
 
     void FixedUpdate() {
-        if(GetComponent<player_info>().Player_Direction==-1)pl1_movement();
-        if(GetComponent<player_info>().Player_Direction == 1)pl2_movement();  
+        if(pld ==-1)pl1_movement();
+        if(pld == 1)pl2_movement();   
     }
 
 }
