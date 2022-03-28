@@ -12,9 +12,13 @@ public class ufo_control : MonoBehaviour
     private bool ifst=false;
     public int respawntime;
     public int stoptime;
+    public int blinktime;
+    public Animator animator;
+
     void Start()
     {
         transform.position=new Vector3(ufo_direction*33,high+100,0);
+        animator.SetBool("IsBlinking",false);
     }
 
     public void respawn(){
@@ -26,13 +30,18 @@ public class ufo_control : MonoBehaviour
             ifst=false;
     }
     public void finish(){
+        animator.SetBool("IsBlinking",false);
         transform.position=new Vector3(ufo_direction*33,high+100,0);
         ifst=false;
+    }
+    public void startblink(){
+        animator.SetBool("IsBlinking",true);
     }
     void Update()
     {
         time+=Time.deltaTime;
         if(time>respawntime)finish();
+        if(time>blinktime)startblink();
         if(time>stoptime)stop();
         if(ifst)transform.position+=new Vector3(0,-1,0)*speed*Time.deltaTime;
     }
