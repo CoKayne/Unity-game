@@ -5415,6 +5415,7 @@ MonoBehaviour:
   respawntime: 5
   stoptime: 3
   blinktime: 0
+  player_name: 
   animator: {fileID: 440788981}
 --- !u!61 &440788978
 BoxCollider2D:
@@ -10867,8 +10868,9 @@ MonoBehaviour:
   time: 0
   speed: 10
   respawntime: 5
-  stoptime: 3
+  stoptime: 3.2
   blinktime: 4
+  player_name: 
   animator: {fileID: 531624850}
 --- !u!95 &531624850
 Animator:
@@ -16588,7 +16590,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1272191740
@@ -26557,6 +26559,7 @@ GameObject:
   - component: {fileID: 1436052374}
   - component: {fileID: 1436052377}
   - component: {fileID: 1436052378}
+  - component: {fileID: 1436052380}
   - component: {fileID: 1436052373}
   - component: {fileID: 1436052379}
   - component: {fileID: 1436052372}
@@ -26758,6 +26761,32 @@ MonoBehaviour:
   rb: {fileID: 1436052374}
   facewh: 0
   pld: 0
+  info: {fileID: 1436052378}
+  animator: {fileID: 1436052372}
+--- !u!114 &1436052380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436052371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f861cc427299a3840a464f1ae2b6eee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 128
+  groundCheck: {fileID: 1082191066}
+  checkRadius: 0.5
+  doubleJumpForce: 75
+  speed: 60
+  jumpforce: 100
+  rb: {fileID: 1436052374}
+  facewh: 0
+  pld: 0
+  IsInvincible: 0
   info: {fileID: 1436052378}
   animator: {fileID: 1436052372}
 --- !u!1 &1552987760
@@ -27137,25 +27166,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1607502461}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4f3778bc144ee142b731ef4bb1ee789, type: 3}
+  m_Script: {fileID: 11500000, guid: f861cc427299a3840a464f1ae2b6eee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundCheck: {fileID: 970078499}
-  checkRadius: 0.5
   whatIsGround:
     serializedVersion: 2
     m_Bits: 128
+  groundCheck: {fileID: 970078499}
+  checkRadius: 0.5
+  doubleJumpForce: 75
   speed: 60
   jumpforce: 100
-  doubleJumpForce: 75
   rb: {fileID: 1607502462}
-  teleportcountdown: 0
-  teleportcountdownlimit: 0
-  telepordistance: 15
   facewh: 0
+  pld: 0
+  IsInvincible: 0
   info: {fileID: 1607502469}
   animator: {fileID: 1607502470}
-  pld: 0
 --- !u!114 &1607502467
 MonoBehaviour:
   m_ObjectHideFlags: 0

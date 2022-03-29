@@ -10,9 +10,11 @@ public class ufo_control : MonoBehaviour
     public float time=0;
     public int speed;
     private bool ifst=false;
-    public int respawntime;
-    public int stoptime;
-    public int blinktime;
+    private bool Isrepawning=false; 
+    public float respawntime;
+    public float stoptime;
+    public float blinktime;
+    public string player_name;
     public Animator animator;
 
     void Start()
@@ -21,29 +23,32 @@ public class ufo_control : MonoBehaviour
         animator.SetBool("IsBlinking",false);
     }
 
-    public void respawn(){
+    public void respawn(string pn){
+        player_name=pn;
         ifst=true;
+        Isrepawning=true;
         time=0;
         transform.position=new Vector3(ufo_direction*33,high,0);
     }
     public void stop(){
             ifst=false;
+            GameObject.Find(player_name).GetComponent<player_movement>().IsInvincible=false;
+    }
+    public void startblinking(){
+        animator.SetBool("IsBlinking",true);
     }
     public void finish(){
         animator.SetBool("IsBlinking",false);
         transform.position=new Vector3(ufo_direction*33,high+100,0);
-        ifst=false;
-    }
-    public void startblink(){
-        animator.SetBool("IsBlinking",true);
+        Isrepawning=false;
+        animator.SetBool("IsBlinking",false);
     }
     void Update()
     {
         time+=Time.deltaTime;
-        if(time>respawntime)finish();
-        if(time>blinktime)startblink();
-        if(time>stoptime)stop();
-        if(ifst)transform.position+=new Vector3(0,-1,0)*speed*Time.deltaTime;
+        if(time>respawntime&&Isrepawning)finish();
+        if(time>blinktime&&Isrepawning)startblinking();
+        if(time>stoptime&&Isrepawning)stop();
+        if(ifst&&Isrepawning)transform.position+=new Vector3(0,-1,0)*speed*Time.deltaTime;
     }
 }
-
