@@ -41,7 +41,6 @@ public class ufo_control : MonoBehaviour
         animator.SetBool("IsBlinking",false);
         transform.position=new Vector3(ufo_direction*33,high+100,0);
         Isrepawning=false;
-        animator.SetBool("IsBlinking",false);
     }
     void Update()
     {

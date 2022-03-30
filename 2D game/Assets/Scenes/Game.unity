@@ -5414,7 +5414,7 @@ MonoBehaviour:
   speed: 10
   respawntime: 5
   stoptime: 3
-  blinktime: 0
+  blinktime: 4
   player_name: 
   animator: {fileID: 440788981}
 --- !u!61 &440788978
@@ -26569,7 +26569,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1436052372
 Animator:
   serializedVersion: 3

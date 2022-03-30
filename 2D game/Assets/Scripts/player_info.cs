@@ -15,6 +15,7 @@ public class player_info : MonoBehaviour
     void Start()
     { 
         if(Name=="Robert")Robert_ablitity();
+        if(Player_Direction==-1)transform.position+=new Vector3(1,0,0);
     }
     public void setleft(){
        Player_Direction =- 1;
