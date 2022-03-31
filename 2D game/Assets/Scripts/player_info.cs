@@ -9,6 +9,7 @@ public class player_info : MonoBehaviour
     public int Player_Direction;
     public string Name;
     public int respawn = 1;
+    public float respawnhigh;
     public string[] ufoname;
     public string ownufo;
     // Start is called before the first frame update
@@ -25,7 +26,7 @@ public class player_info : MonoBehaviour
     }
 
     public void respawnposition(){
-       transform.position = new Vector3(33 * Player_Direction, 43, 0);
+       transform.position = new Vector3(33 * Player_Direction, respawnhigh, 0);
        GameObject.Find(ownufo).GetComponent<ufo_control>().respawn(Name);
     }
     // Update is called once per frame

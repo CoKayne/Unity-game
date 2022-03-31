@@ -12,8 +12,8 @@ public class main_control : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        left=playerName[0];
-        right=playerName[1];
+        //left=playerName[0];
+        //right=playerName[1];
         GameObject.Find(left).GetComponent<player_info>().setleft();
         GameObject.Find(right).GetComponent<player_info>().setright();
     }
