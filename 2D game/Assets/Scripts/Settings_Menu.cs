@@ -8,7 +8,11 @@ public class Settings_Menu : MonoBehaviour
 {
     public AudioMixer audioMixer;
     public void quitSetttings(){
-        SceneManager.LoadScene("Main_menu");
+        StartCoroutine(DoChangeScene("Main_menu", .1f));
+    }
+    IEnumerator DoChangeScene(string sceneToChangeTo, float delay){
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(sceneToChangeTo);
     }
     public void setVolume(float volume){
         audioMixer.SetFloat("Volume", volume);

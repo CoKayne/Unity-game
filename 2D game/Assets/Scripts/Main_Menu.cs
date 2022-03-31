@@ -7,11 +7,15 @@ public class Main_Menu : MonoBehaviour
 {
 
     public void PlayGame(){
-       SceneManager.LoadScene("Game"); 
+        StartCoroutine(DoChangeScene("Game", .1f));
     }
 
     public void openSettings(){
-        SceneManager.LoadScene("Settings_menu");
+        StartCoroutine(DoChangeScene("Settings_menu", .1f));
+    }
+    IEnumerator DoChangeScene(string sceneToChangeTo, float delay){
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(sceneToChangeTo);
     }
 
     public void QuitGame(){
