@@ -138,6 +138,7 @@ public class player_movement : MonoBehaviour
 
     void Update()
     {
+        
         if (!IsInvincible)
         {
             pld = GetComponent<player_info>().Player_Direction;
