@@ -47,12 +47,17 @@ public class player_info : MonoBehaviour
     public void Robert_ablitity(){
         lifeValue++;
     }
+    public void Bryant_ablitity(){
+        if(Player_Direction==-1&&Input.GetKeyDown("e"));
+        if(Player_Direction==1&&Input.GetKeyDown("u"));
+    }
     /*public void player_ablitity(){
 
     }*/
     void Update()
     {
         if(name=="Ghost")Ghost_ablitity();
+        if(name=="Bryant")Bryant_ablitity();
     }
 
     void FixedUpdate(){
