@@ -1472,7 +1472,10 @@ MonoBehaviour:
   - {fileID: 1773191041}
   - {fileID: 740042846}
   - {fileID: 2056339156}
+  charactersTMP: []
   selectedChar: 0
+  player1Char: 0
+  player2Char: 0
 --- !u!4 &1212625261
 Transform:
   m_ObjectHideFlags: 0
@@ -2354,7 +2357,10 @@ MonoBehaviour:
   - {fileID: 247502953}
   - {fileID: 1575248506}
   - {fileID: 673094220}
+  charactersTMP: []
   selectedChar: 0
+  player1Char: 0
+  player2Char: 0
 --- !u!1 &1969545985
 GameObject:
   m_ObjectHideFlags: 0
