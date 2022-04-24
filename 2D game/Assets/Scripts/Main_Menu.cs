@@ -9,7 +9,9 @@ public class Main_Menu : MonoBehaviour
     public void PlayGame(){
         StartCoroutine(DoChangeScene("Game", .1f));
     }
-
+    public void openSelectMenu(){
+        StartCoroutine(DoChangeScene("Char_selection", .1f));
+    }
     public void openSettings(){
         StartCoroutine(DoChangeScene("Settings_menu", .1f));
     }

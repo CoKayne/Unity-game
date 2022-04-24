@@ -21,7 +21,7 @@ public class selection_control : MonoBehaviour
             int player1Char = GameObject.Find("Characters1").GetComponent<Character_selection>().selectedChar;
             GameObject.Find("Characters2").GetComponent<Character_selection>().removeCharacter(player1Char);
             player1Selected = true;
-            // Debug.Log(player2Char);
+            GameObject.Find("Characters2").GetComponent<Character_selection>().selectCompleteLeft(player1Char);
         }
 
         //player 2 select
@@ -34,6 +34,7 @@ public class selection_control : MonoBehaviour
             int player2Char = GameObject.Find("Characters2").GetComponent<Character_selection>().selectedChar;
             GameObject.Find("Characters1").GetComponent<Character_selection>().removeCharacter(player2Char);
             player2Selected = true;
+            GameObject.Find("Characters1").GetComponent<Character_selection>().selectCompleteRight(player2Char);
         }
 
         if(player1Selected == true && player2Selected == true){
