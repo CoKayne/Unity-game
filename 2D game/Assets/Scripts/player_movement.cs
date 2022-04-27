@@ -138,12 +138,17 @@ public class player_movement : MonoBehaviour
 
     void Update()
     {
-        
+
         if (!IsInvincible)
         {
             pld = GetComponent<player_info>().Player_Direction;
             if (pld == -1) pl1_jump();
             if (pld == 1) pl2_jump();
+        }
+        else
+        {
+            animator.SetBool("Iswalking", false);
+            doubleJump = 0;
         }
     }
 

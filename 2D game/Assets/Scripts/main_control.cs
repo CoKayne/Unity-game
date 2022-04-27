@@ -5,9 +5,8 @@ using UnityEngine;
 public class main_control : MonoBehaviour
 {
     public string[] playerName;
-    static public string left;
-
-    static public string right;
+    public string left;
+    public string right;
     
     // Start is called before the first frame update
     void Start()

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class player_info : MonoBehaviour
 {
     public float lifeValue = 3;
-    public int Player_Direction;
+    public int Player_Direction = 0;
     public string Name;
     public int respawn = 1;
     public float respawnhigh;
@@ -24,10 +24,12 @@ public class player_info : MonoBehaviour
     public void setleft()
     {
         Player_Direction = -1;
+        transform.position = new Vector3(-27, 50, 0);
     }
     public void setright()
     {
         Player_Direction = 1;
+        transform.position = new Vector3(27, 50, 0);
     }
 
     public void respawnposition()
@@ -54,7 +56,8 @@ public class player_info : MonoBehaviour
     }
     public void Ghost_ablitity()
     {
-        if (Input.GetKeyDown("e")) teleport(GetComponent<player_movement>().facewh);
+        if (Player_Direction == -1 && Input.GetKeyDown("e")) teleport(GetComponent<player_movement>().facewh);
+        if (Player_Direction == 1 && Input.GetKeyDown("u")) teleport(GetComponent<player_movement>().facewh);
     }
     public void Robert_ablitity()
     {

@@ -40,7 +40,6 @@ public class ufo_control : MonoBehaviour
     public void stop()
     {
         ifst = false;
-        GameObject.Find(player_name).GetComponent<player_movement>().IsInvincible = false;
         GameObject.Find(Character_picture_name).GetComponent<Character_picture_control_left>().playermove();
 
     }
@@ -48,6 +47,7 @@ public class ufo_control : MonoBehaviour
     {
         animator.SetBool("IsBlinking", true);
         GameObject.Find(Character_picture_name).GetComponent<Character_picture_control_left>().leave();
+        GameObject.Find(player_name).GetComponent<player_movement>().IsInvincible = false;
     }
     public void finish()
     {
