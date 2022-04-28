@@ -27,10 +27,17 @@ public class Character_selection : MonoBehaviour
         bool player1S = GameObject.Find("Select_control").GetComponent<selection_control>().player1Selected;
         bool player2S = GameObject.Find("Select_control").GetComponent<selection_control>().player2Selected;
         if(player1S == false && player2S == false){
+            if(target == selectedChar){
+                selectedChar = (selectedChar + 1) % characters.Count;
+                characters[selectedChar].SetActive(true);
+                selectedChar = (selectedChar - 1) % characters.Count;
+            }else{
+                characters[selectedChar].SetActive(false);
+                selectedChar = 0;
+                characters[0].SetActive(true);
+            }
             Destroy(characters[target]);
             characters.RemoveAt(target);
-            characters[0].SetActive(true);
-            selectedChar = 0;
         }
     }
     public void selectCompleteLeft(int target){
