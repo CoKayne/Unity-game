@@ -28492,7 +28492,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 19.2, y: 10.8}
+  m_Size: {x: 0.7, y: 0.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -28506,7 +28506,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607502461}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 156.3, y: -119.7, z: 0}
+  m_LocalPosition: {x: 158.5, y: -120.2, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 1.2269489}
   m_Children:
   - {fileID: 970078499}
@@ -28531,7 +28531,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.4, y: 0.4}
-    newSize: {x: 19.2, y: 10.8}
+    newSize: {x: 0.7, y: 0.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -34113,6 +34113,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7ca259c5954b0884394b5ae0eb2b719b, type: 3}
+    - target: {fileID: 3485275964238621204, guid: 920bf7a053c5fd044afd0123bd1d1a60, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3485275964238621205, guid: 920bf7a053c5fd044afd0123bd1d1a60, type: 3}
       propertyPath: m_Size.x
       value: 0.6933304
