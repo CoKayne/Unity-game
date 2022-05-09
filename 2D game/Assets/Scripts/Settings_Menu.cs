@@ -6,9 +6,11 @@ using UnityEngine.Audio;
 
 public class Settings_Menu : MonoBehaviour
 {
+    public Animator transition;
+    public float transTime;
     public AudioMixer audioMixer;
     public void quitSetttings(){
-        StartCoroutine(DoChangeScene("Main_menu", .1f));
+        StartCoroutine(DoChangeScene("Main_menu", transTime));
     }
     IEnumerator DoChangeScene(string sceneToChangeTo, float delay){
         yield return new WaitForSeconds(delay);

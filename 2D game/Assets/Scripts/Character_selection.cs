@@ -7,6 +7,7 @@ public class Character_selection : MonoBehaviour
     // Start is called before the first frame update
     public List<GameObject> characters;
     public List<GameObject> charactersTMP;
+    public List<string> charName;
     public int selectedChar = 0; 
     public int player1Char;
     public int player2Char;
@@ -38,13 +39,14 @@ public class Character_selection : MonoBehaviour
             }
             Destroy(characters[target]);
             characters.RemoveAt(target);
+            charName.RemoveAt(target);
         }
     }
     public void selectCompleteLeft(int target){
-        GameObject.Find("main").GetComponent<main_control>().left = characters[target].ToString();
+        GameObject.Find("CharSave").GetComponent<CharSave>().pl2 = charName[target];  
     }
     public void selectCompleteRight(int target){
-        GameObject.Find("main").GetComponent<main_control>().right = characters[target].ToString();
+        GameObject.Find("CharSave").GetComponent<CharSave>().pl1 = charName[target];
     }
 
 }

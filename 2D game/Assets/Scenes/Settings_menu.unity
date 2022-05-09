@@ -3209,4 +3209,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4f7fedc436f66844b781e59576d593d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transition: {fileID: 0}
+  transTime: 0.1
   audioMixer: {fileID: 24100000, guid: a7ac15699c557b24b99224a5a8db6485, type: 2}

@@ -11,8 +11,8 @@ public class main_control : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //left=playerName[0];
-        //right=playerName[1];
+        left = GameObject.Find("CharSave").GetComponent<CharSave>().pl1;
+        right = GameObject.Find("CharSave").GetComponent<CharSave>().pl2;
         GameObject.Find(left).GetComponent<player_info>().setleft();
         GameObject.Find(right).GetComponent<player_info>().setright();
     }
@@ -20,6 +20,7 @@ public class main_control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         
+         Debug.Log(left);
+         Debug.Log(right);
     }
 }
