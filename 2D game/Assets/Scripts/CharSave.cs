@@ -7,6 +7,8 @@ public class CharSave : MonoBehaviour
     public GameObject gm;
     public string pl1;
     public string pl2;
+    public string win;
+    public string loss;
     
     // Start is called before the first frame update
     void Start()

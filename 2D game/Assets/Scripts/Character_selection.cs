@@ -43,10 +43,10 @@ public class Character_selection : MonoBehaviour
         }
     }
     public void selectCompleteLeft(int target){
-        GameObject.Find("CharSave").GetComponent<CharSave>().pl2 = charName[target];  
+        GameObject.Find("CharSave").GetComponent<CharSave>().pl1 = charName[target];  
     }
     public void selectCompleteRight(int target){
-        GameObject.Find("CharSave").GetComponent<CharSave>().pl1 = charName[target];
+        GameObject.Find("CharSave").GetComponent<CharSave>().pl2 = charName[target];
     }
 
 }

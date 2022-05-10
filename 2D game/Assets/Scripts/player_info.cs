@@ -21,10 +21,7 @@ public class player_info : MonoBehaviour
         if (Name == "Robert") Robert_ablitity();
         if (Player_Direction == -1) transform.position += new Vector3(1, 0, 0);
     }
-    IEnumerator DoChangeScene(string sceneToChangeTo, float delay){
-        yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene(sceneToChangeTo);
-    }
+
     public void setleft()
     {
         Player_Direction = -1;
@@ -54,8 +51,9 @@ public class player_info : MonoBehaviour
                 GameObject.Find(ownufo).GetComponent<ufo_control>().respawn(Name);
                 transform.position = new Vector3(0, -1000, 0);
             }
-            else{
-                StartCoroutine(DoChangeScene("Victory", .1f));
+            else
+            {
+                GameObject.Find("main").GetComponent<main_control>().whowin(-Player_Direction);
             }
         }
 

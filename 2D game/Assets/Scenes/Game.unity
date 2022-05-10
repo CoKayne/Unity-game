@@ -17056,7 +17056,7 @@ MonoBehaviour:
   - ufo_right
   ownufo: 
   respawn_position_x: 33
-  respawn_position_y: 6.4735
+  respawn_position_y: 7
 --- !u!114 &1020184230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17238,7 +17238,7 @@ MonoBehaviour:
   launchx: 0
   launchy: 0
   timer: 0
-  cool_down: 10
+  cool_down: 5
 --- !u!1 &1082191065
 GameObject:
   m_ObjectHideFlags: 0
@@ -17281,7 +17281,7 @@ GameObject:
   - component: {fileID: 1110207277}
   - component: {fileID: 1110207275}
   m_Layer: 0
-  m_Name: Bryant_picture_right
+  m_Name: Bryant_picture_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34373,7 +34373,7 @@ MonoBehaviour:
   - Robert
   - Monkey
   - Bryant
-  left: Ghost
+  left: Bryant
   right: Monkey
 --- !u!4 &2087244222
 Transform:
