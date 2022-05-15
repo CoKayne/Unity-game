@@ -8,7 +8,7 @@ public class main_control : MonoBehaviour
     public string[] playerName;
     public string left;
     public string right;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,16 +17,21 @@ public class main_control : MonoBehaviour
         GameObject.Find(left).GetComponent<player_info>().setleft();
         GameObject.Find(right).GetComponent<player_info>().setright();
     }
-    IEnumerator DoChangeScene(string sceneToChangeTo, float delay){
+    IEnumerator DoChangeScene(string sceneToChangeTo, float delay)
+    {
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(sceneToChangeTo);
     }
 
-    public void whowin(int n){
-        if(n==-1){
+    public void whowin(int n)
+    {
+        if (n == -1)
+        {
             setwin(left);
             setloss(right);
-        }else {
+        }
+        else if (n == 1)
+        {
             setwin(right);
             setwin(left);
         }
@@ -34,15 +39,17 @@ public class main_control : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void setwin(string s){
-        GameObject.Find("CharSave").GetComponent<CharSave>().win=s;
+    public void setwin(string s)
+    {
+        GameObject.Find("CharSave").GetComponent<CharSave>().win = s;
     }
-    public void setloss(string s){
-        GameObject.Find("CharSave").GetComponent<CharSave>().loss=s;
+    public void setloss(string s)
+    {
+        GameObject.Find("CharSave").GetComponent<CharSave>().loss = s;
     }
     void Update()
     {
-         Debug.Log(left);
-         Debug.Log(right);
+        Debug.Log(left);
+        Debug.Log(right);
     }
 }

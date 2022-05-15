@@ -34147,7 +34147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3485275964238621206, guid: 920bf7a053c5fd044afd0123bd1d1a60, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3485275964238621206, guid: 920bf7a053c5fd044afd0123bd1d1a60, type: 3}
       propertyPath: m_SurfaceArc

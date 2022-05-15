@@ -82,6 +82,7 @@
      <Compile Include="Assets\Scripts\Toggle_status.cs" />
      <Compile Include="Assets\Scripts\VIctoryMenu.cs" />
      <Compile Include="Assets\Scripts\Rocket_control.cs" />
+     <Compile Include="Assets\Scripts\CharSave.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
@@ -99,7 +100,7 @@
      <Compile Include="Assets\Scripts\Rocket_movement.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
      <Compile Include="Assets\Scripts\heart_judge.cs" />
-     <Compile Include="Assets\Scripts\CharSave.cs" />
+     <Compile Include="Assets\Scripts\Win_Lost_Control.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
