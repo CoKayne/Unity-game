@@ -16727,6 +16727,7 @@ MonoBehaviour:
   groundCheck: {fileID: 1399495254}
   checkRadius: 0.5
   doubleJumpForce: 75
+  doubleJump: 0
   speed: 60
   jumpforce: 100
   rb: {fileID: 963859961}
@@ -17075,6 +17076,7 @@ MonoBehaviour:
   groundCheck: {fileID: 774836993}
   checkRadius: 0.5
   doubleJumpForce: 75
+  doubleJump: 0
   speed: 60
   jumpforce: 100
   rb: {fileID: 1020184233}
@@ -28010,6 +28012,7 @@ MonoBehaviour:
   groundCheck: {fileID: 1082191066}
   checkRadius: 0.5
   doubleJumpForce: 75
+  doubleJump: 0
   speed: 60
   jumpforce: 100
   rb: {fileID: 1436052374}
@@ -28557,6 +28560,7 @@ MonoBehaviour:
   groundCheck: {fileID: 970078499}
   checkRadius: 0.5
   doubleJumpForce: 75
+  doubleJump: 0
   speed: 60
   jumpforce: 100
   rb: {fileID: 1607502462}

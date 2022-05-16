@@ -33,7 +33,7 @@ public class main_control : MonoBehaviour
         else if (n == 1)
         {
             setwin(right);
-            setwin(left);
+            setloss(left);
         }
         StartCoroutine(DoChangeScene("Victory", .1f));
     }
