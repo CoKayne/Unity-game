@@ -17050,7 +17050,7 @@ MonoBehaviour:
   Player_Direction: 1
   Name: Bryant
   respawn: 1
-  respawnhigh: 50
+  respawnhigh: 43
   ufoname:
   - ufo_left
   - ufo_right

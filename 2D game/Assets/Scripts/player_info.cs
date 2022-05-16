@@ -50,6 +50,7 @@ public class player_info : MonoBehaviour
             {
                 GameObject.Find(ownufo).GetComponent<ufo_control>().respawn(Name);
                 transform.position = new Vector3(0, -1000, 0);
+                GetComponent<player_movement>().doubleJump=0;
             }
             else
             {

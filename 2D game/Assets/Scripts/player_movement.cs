@@ -10,7 +10,7 @@ public class player_movement : MonoBehaviour
     public Transform groundCheck;
     public float checkRadius;
     public float doubleJumpForce = 1f;
-    private int doubleJump = 0;
+    public int doubleJump = 0;
     public float speed = 1f;
     public float jumpforce = 1f;
     public Rigidbody2D rb;
@@ -138,26 +138,14 @@ public class player_movement : MonoBehaviour
 
     void Update()
     {
-
-        if (!IsInvincible)
-        {
             pld = GetComponent<player_info>().Player_Direction;
             if (pld == -1) pl1_jump();
             if (pld == 1) pl2_jump();
-        }
-        else
-        {
-            animator.SetBool("Iswalking", false);
-            doubleJump = 0;
-        }
     }
 
     void FixedUpdate()
     {
-        if (!IsInvincible)
-        {
             if (pld == -1) pl1_movement();
             if (pld == 1) pl2_movement();
-        }
     }
 }
