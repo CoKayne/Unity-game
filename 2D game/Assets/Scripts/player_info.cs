@@ -13,12 +13,14 @@ public class player_info : MonoBehaviour
     public string[] ufoname;
     public string ownufo;
 
+    public Animator animate;
     public float respawn_position_x;
     public float respawn_position_y;
     // Start is called before the first frame update
     void Start()
     {
         if (Name == "Robert") Robert_ablitity();
+        if (Name == "Bryant") Bryant_ablitity();
         if (Player_Direction == -1) transform.position += new Vector3(1, 0, 0);
     }
 
@@ -50,7 +52,7 @@ public class player_info : MonoBehaviour
             {
                 GameObject.Find(ownufo).GetComponent<ufo_control>().respawn(Name);
                 transform.position = new Vector3(0, -1000, 0);
-                GetComponent<player_movement>().doubleJump=0;
+                GetComponent<player_movement>().doubleJump = 0;
             }
             else
             {
@@ -63,6 +65,7 @@ public class player_info : MonoBehaviour
     {
         if (Player_Direction == -1 && Input.GetKeyDown("e")) teleport(GetComponent<player_movement>().facewh);
         if (Player_Direction == 1 && Input.GetKeyDown("u")) teleport(GetComponent<player_movement>().facewh);
+        animate.SetBool("Isteleporting",false);
     }
     public void Robert_ablitity()
     {
@@ -70,8 +73,7 @@ public class player_info : MonoBehaviour
     }
     public void Bryant_ablitity()
     {
-        if (Player_Direction == -1 && Input.GetKeyDown("e")) ;
-        if (Player_Direction == 1 && Input.GetKeyDown("u")) ;
+        GetComponent<mushroom_ablitity_control>().okornot = true;
     }
     /*public void player_ablitity(){
 
@@ -88,6 +90,7 @@ public class player_info : MonoBehaviour
     }
     public void teleport(float facewh)
     {
+        animate.SetBool("Isteleporting",true);      
         transform.position += new Vector3(facewh, 0, 0) * 15;
     }
 

@@ -138,14 +138,14 @@ public class player_movement : MonoBehaviour
 
     void Update()
     {
-            pld = GetComponent<player_info>().Player_Direction;
-            if (pld == -1) pl1_jump();
-            if (pld == 1) pl2_jump();
+        pld = GetComponent<player_info>().Player_Direction;
+        if (pld == -1) pl1_jump();
+        if (pld == 1) pl2_jump();
     }
 
     void FixedUpdate()
     {
-            if (pld == -1) pl1_movement();
-            if (pld == 1) pl2_movement();
+        if (pld == -1) pl1_movement();
+        if (pld == 1) pl2_movement();
     }
 }
